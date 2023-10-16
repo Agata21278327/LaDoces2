@@ -1,0 +1,13 @@
+﻿@model LaDoces2.ViewModel.HomeViewModel
+
+@{
+    ViewData["Title"] = "Cardápio";
+}
+<partial name="_Carousel" />
+<h1>Itens em destaque</h1>
+<div class="row">
+    @foreach (var item in Model.ItensEmDestaque)
+    {
+        <partial name="_Card" for="@item"></partial>
+    }
+</div>
