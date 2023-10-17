@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LaDoces2.Context;
 using LaDoces2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LaDoces2.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class AdminItemController : Controller
     {

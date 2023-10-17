@@ -28,6 +28,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminItem" asp-action="Index">Item</a>
                         </li>
+                        <li>
+                            @await Html.PartialAsync("_Login")
+                        </li>
                     </ul>
                 </div>
             </div>
