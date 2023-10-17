@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\cs\\LaDoces2\\LaDoces2.csproj": {}
+    "C:\\dev\\LaDoces2\\LaDoces2.csproj": {}
   },
   "projects": {
-    "C:\\dev\\cs\\LaDoces2\\LaDoces2.csproj": {
+    "C:\\dev\\LaDoces2\\LaDoces2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\cs\\LaDoces2\\LaDoces2.csproj",
+        "projectUniqueName": "C:\\dev\\LaDoces2\\LaDoces2.csproj",
         "projectName": "LaDoces2",
-        "projectPath": "C:\\dev\\cs\\LaDoces2\\LaDoces2.csproj",
+        "projectPath": "C:\\dev\\LaDoces2\\LaDoces2.csproj",
         "packagesPath": "C:\\Users\\Aluno Dev\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\cs\\LaDoces2\\obj\\",
+        "outputPath": "C:\\dev\\LaDoces2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluno Dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
