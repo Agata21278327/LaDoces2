@@ -1,10 +1,12 @@
 using LaDoces2.Models;
 using LaDoces2.Repositories.Interfaces;
 using LaDoces2.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LaDoces2.Controllers
 {
+    [Authorize]
     public class CarrinhoController : Controller
     {
         private readonly Carrinho _carrinho;

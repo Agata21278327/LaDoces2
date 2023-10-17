@@ -2,11 +2,16 @@ using LaDoces2.Context;
 using LaDoces2.Models;
 using LaDoces2.Repositories;
 using LaDoces2.Repositories.Interfaces;
+using LaDoces2.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<IUserRoleInicial, UserRoleInicial>();
+builder.Services.AddIdentity<UserAcount, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped(sp => Carrinho.GetCarrinhoCompra(sp));
 builder.Services.AddMemoryCache();
 builder.Services.AddSession();
@@ -30,9 +35,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+CriarPerfisUsuarios(app);
 app.UseSession();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+
 app.MapControllerRoute(
 name: "categoriaFiltro",
 pattern: "Item/{action}/{categoria?}",
@@ -48,3 +57,12 @@ app.MapControllerRoute(
 
 
 app.Run();
+
+static void CriarPerfisUsuarios(WebApplication app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+    using var scope = scopedFactory?.CreateScope();
+    var service = scope?.ServiceProvider.GetService<IUserRoleInicial>();
+    service?.SeedRoles();
+    service?.SeedUsers();
+}
