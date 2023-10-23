@@ -13,7 +13,7 @@ a {
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
+  background-color: #cb55a6;
   border-color: #1861ac;
 }
 
@@ -31,7 +31,7 @@ a {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(255, 255, 255, 0.05);
 }
 
 button.accept-policy {
@@ -46,3 +46,5 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+

@@ -13,7 +13,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-left">
-        <a class="nav-link text-dark" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}", Context.Request.Path, Context.Request.QueryString)" style="color:black">&nbsp; Log in&nbsp; </a>
-        <a class="nav-link text-dark" asp-controller="Account" asp-action="Register" style="color:black">&nbsp;Registro&nbsp;&nbsp;&nbsp;</a>
+        <a class="nav-link text-dark btn-rosa me-4 rounded-pill shadow border border-light" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@string.Format("{0}{1}", Context.Request.Path, Context.Request.QueryString)" style="color:rgb(217, 101, 101)">&nbsp;ㅤLoginㅤ&nbsp; </a>
+        <a class="nav-link text-dark btn-rosa me-2 rounded-pill shadow border border-light" asp-controller="Account" asp-action="Register" style="color:rgb(0, 0, 0)">&nbsp;ㅤRegistroㅤ&nbsp;&nbsp;&nbsp;</a>
     </ul>
 }
