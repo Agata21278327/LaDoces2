@@ -3,8 +3,8 @@
     ViewData["Title"] = "Cardápio";
 }
 <partial name="_Carousel"/>
-<h1>@Model.CategoriaAtual</h1>
-<div class="containerk">
+<h1 class="my-3 text-center">@Model.CategoriaAtual</h1>
+<div class="container ">
     <div class="row">
         @foreach (var item in Model.Itens)
         {

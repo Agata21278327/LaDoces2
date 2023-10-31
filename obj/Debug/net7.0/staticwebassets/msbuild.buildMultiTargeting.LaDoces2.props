@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LaDoces2.props" />
+</Project>

@@ -4,13 +4,13 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Criar</h1>
 
 <h4>Item</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nome" class="control-label"></label>
@@ -33,14 +33,12 @@
                 <span asp-validation-for="Preco" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImagemPequenaUrl" class="control-label"></label>
-                <input asp-for="ImagemPequenaUrl" class="form-control" />
-                <span asp-validation-for="ImagemPequenaUrl" class="text-danger"></span>
+                <label asp-for="ImagemUrl"></label>
+                <input type="file" class="form-control" name="Imagem" id="Imagem">
             </div>
             <div class="form-group">
-                <label asp-for="ImagemUrl" class="control-label"></label>
-                <input asp-for="ImagemUrl" class="form-control" />
-                <span asp-validation-for="ImagemUrl" class="text-danger"></span>
+                <label asp-for="ImagemPequenaUrl"></label>
+                <input type="file" class="form-control" name="Imagemcurta" id="Imagemcurta">
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
@@ -57,13 +55,13 @@
                 <select asp-for="CategoriaId" class ="form-control" asp-items="ViewBag.CategoriaId"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 

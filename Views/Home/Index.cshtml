@@ -3,8 +3,8 @@
     ViewData["Title"] = "Cardápio";
 }
 <partial name="_Carousel" />
-<h1 class="text-center">Itens em destaque</h1>
-<div class="row d-flex justify-content-center gap-3">
+<h1 class="text-center my-3">Itens em destaque</h1>
+<div class="row  row-cols-1 row-cols-sm-3">
     @foreach (var item in Model.ItensEmDestaque)
     {
         <partial name="_Card" for="@item"></partial>

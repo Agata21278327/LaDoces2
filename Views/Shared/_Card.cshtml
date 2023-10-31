@@ -1,14 +1,18 @@
-<div class="card-group" style="width: 18rem;">
-    <img src="@Model.ImagemUrl"" class=" card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title"> <a asp-controller="Item" asp-action="Details"
-                asp-route-itemId="@Model.ItemId">@Model.Nome</a></h5>
-        <h6>Preço: @Model.Preco.ToString("c")</h6>
-        <p class="card-text">@Model.DescricaoCurta</p>
 
-        <a class="btn btn-dark btn btn-opacity-50" id="cartButton" asp-controller="Carrinho"
-            asp-action="AdicionarItemNoCarrinhoCompra" asp-route-itemId="@Model.ItemId">
-            Incluir no Carrinho
-        </a>
+<div class="col">
+
+<div class="card h-100">
+  <img src="@Model.ImagemUrl" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> <a  class="link-rosa" asp-controller="Item" asp-action="Details" asp-route-itemId="@Model.ItemId">@Model.Nome</a></h5>
+    <p class="card-text">@Model.DescricaoCurta.</p>
+    <h3>Preço : @Model.Preco.ToString("c")</h3>
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+    <a class="btn btn-rosa" id="cartButton" asp-controller="Carrinho"
+                asp-action="AdicionarItemNoCarrinhoCompra" asp-route-itemId="@Model.ItemId">
+                Incluir no Carrinho
+            </a>
     </div>
+  </div>
+</div>
 </div>

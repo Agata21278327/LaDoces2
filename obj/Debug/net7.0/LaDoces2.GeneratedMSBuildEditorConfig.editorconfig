@@ -56,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JdGVtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/dev/cs/LaDoces2/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/cs/LaDoces2/Areas/Admin/Views/AdminRelatorioVendas/Relatorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcUmVsYXRvcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/dev/cs/LaDoces2/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -126,6 +134,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/dev/cs/LaDoces2/Views/Shared/_Card.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dev/cs/LaDoces2/Views/Shared/_Card1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJkMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/dev/cs/LaDoces2/Views/Shared/_Carousel.cshtml]

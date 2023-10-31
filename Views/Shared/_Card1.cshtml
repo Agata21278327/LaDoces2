@@ -1,0 +1,19 @@
+<div class="card-group" style="width: 18rem;">
+    <img src="@Model.ImagemUrl"" class=" +" alt="...">
+
+    <div class="card-body">
+        <h5 class="card-title">
+            <a asp-controller="Item" asp-action="Details" asp-route-itemId="@Model.ItemId">@Model.Nome</a>
+        </h5>
+        <h6>Preço: @Model.Preco.ToString("c")</h6>
+        <p class="card-text">@Model.DescricaoCurta</p>
+         <a class="btn btn-primary" id="cartButton" asp-controller="Carrinho"
+                asp-action="AdicionarItemNoCarrinhoCompra" asp-route-itemId="@Model.ItemId">
+                Incluir no Carrinho
+         </a>
+
+        <a class="btn btn-dark btn btn-opacity-50" id="cartButton" asp-controller="Carrinho"
+            asp-action="AdicionarItemNoCarrinhoCompra" asp-route-itemId="@Model.ItemId">
+            Incluir no Carrinho</a>
+    </div>
+</div>

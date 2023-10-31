@@ -1,10 +1,10 @@
 @model CarrinhoViewModel
 @if (Model.Carrinho.CarrinhoItens.Count > 0)
 {
-    <a asp-controller="Carrinho" asp-action="Index">
-        <span>Carrinho</span>
-        <span style="color:white">
+    <a  class="link-dark text-decoration-none" asp-controller="Carrinho" asp-action="Index">
+        <span>Carrinho <i class="bi bi-bag-heart"></i></span>
+        <span class="badge btn-rosa text-dark">
             @Model.Carrinho.CarrinhoItens.Count
-        </span>
+        </span> 
     </a>
 }

@@ -1,3 +1,4 @@
+using LaDoces2.Areas.Admin.Services;
 using LaDoces2.Context;
 using LaDoces2.Models;
 using LaDoces2.Repositories;
@@ -9,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<RelatorioVendasServices>();
+builder.Services.Configure<ConfiguraImagem>(builder.Configuration.GetSection("ConfImagemItem"));
 builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<IUserRoleInicial, UserRoleInicial>();
 builder.Services.AddIdentity<UserAcount, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
