@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pedidos>
+  <PedidoId>1</PedidoId>
+  <ValorTotal>40</ValorTotal>
+  <Moveis />
+  <PedidoId>2</PedidoId>
+  <ValorTotal>40</ValorTotal>
+  <Moveis />
+  <PedidoId>3</PedidoId>
+  <ValorTotal>40</ValorTotal>
+  <Moveis />
+  <PedidoId>4</PedidoId>
+  <ValorTotal>40</ValorTotal>
+  <Moveis />
+  <PedidoId>5</PedidoId>
+  <ValorTotal>40</ValorTotal>
+  <Moveis />
+  <PedidoId>6</PedidoId>
+  <ValorTotal>60</ValorTotal>
+  <Moveis />
+  <PedidoId>7</PedidoId>
+  <ValorTotal>100</ValorTotal>
+  <Moveis />
+  <PedidoId>8</PedidoId>
+  <ValorTotal>100</ValorTotal>
+  <Moveis />
+  <PedidoId>9</PedidoId>
+  <ValorTotal>100</ValorTotal>
+  <Moveis>
+    <ItemId>1</ItemId>
+    <Quantidade>1</Quantidade>
+  </Moveis>
+  <PedidoId>10</PedidoId>
+  <ValorTotal>20</ValorTotal>
+  <Moveis>
+    <ItemId>2</ItemId>
+    <Quantidade>1</Quantidade>
+  </Moveis>
+  <PedidoId>11</PedidoId>
+  <ValorTotal>20,4</ValorTotal>
+  <Moveis>
+    <ItemId>1</ItemId>
+    <Quantidade>1</Quantidade>
+  </Moveis>
+  <PedidoId>12</PedidoId>
+  <ValorTotal>76,65</ValorTotal>
+  <Moveis>
+    <ItemId>2</ItemId>
+    <Quantidade>1</Quantidade>
+    <ItemId>3</ItemId>
+    <Quantidade>1</Quantidade>
+    <ItemId>1</ItemId>
+    <Quantidade>1</Quantidade>
+  </Moveis>
+  <PedidoId>13</PedidoId>
+  <ValorTotal>20,4</ValorTotal>
+  <Moveis>
+    <ItemId>1</ItemId>
+    <Quantidade>1</Quantidade>
+  </Moveis>
+</Pedidos>
