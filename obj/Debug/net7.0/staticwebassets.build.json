@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IXIctHrR/OsktoGGc+sbToYGxu3/MEkkveG09v2ayAs=",
+  "Hash": "mtS1BC61RxzOzZOwOyRQDWG3ZHeH1Xx/4m0fllBFht4=",
   "Source": "LaDoces2",
   "BasePath": "_content/LaDoces2",
   "Mode": "Default",
@@ -1528,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Vector.png"
+    },
+    {
+      "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\XML\\Pedidos.xml",
+      "SourceId": "LaDoces2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\cs\\LaDoces2\\wwwroot\\",
+      "BasePath": "_content/LaDoces2",
+      "RelativePath": "XML/Pedidos.xml",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\XML\\Pedidos.xml"
     }
   ]
 }

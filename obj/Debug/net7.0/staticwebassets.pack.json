@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\Vector.png"
     },
     {
+      "Id": "C:\\dev\\cs\\LaDoces2\\wwwroot\\XML\\Pedidos.xml",
+      "PackagePath": "staticwebassets\\XML\\Pedidos.xml"
+    },
+    {
       "Id": "C:\\dev\\cs\\LaDoces2\\wwwroot\\carrin.png",
       "PackagePath": "staticwebassets\\carrin.png"
     },
