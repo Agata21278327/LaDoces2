@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mtS1BC61RxzOzZOwOyRQDWG3ZHeH1Xx/4m0fllBFht4=",
+  "Hash": "rJKcQNg+AwGWXH0vI3gca5jJBs1K4S1etAjDYXp3DFw=",
   "Source": "LaDoces2",
   "BasePath": "_content/LaDoces2",
   "Mode": "Default",
@@ -321,6 +321,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\ImagemDoce.png"
+    },
+    {
+      "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\5cafe245-531a-4650-8c82-658a9c8a44f9..jpg",
+      "SourceId": "LaDoces2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\cs\\LaDoces2\\wwwroot\\",
+      "BasePath": "_content/LaDoces2",
+      "RelativePath": "imagens/item/5cafe245-531a-4650-8c82-658a9c8a44f9..jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\item\\5cafe245-531a-4650-8c82-658a9c8a44f9..jpg"
+    },
+    {
+      "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\a4254af0-0f67-4064-bad0-aebae594e868..jpg",
+      "SourceId": "LaDoces2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\dev\\cs\\LaDoces2\\wwwroot\\",
+      "BasePath": "_content/LaDoces2",
+      "RelativePath": "imagens/item/a4254af0-0f67-4064-bad0-aebae594e868..jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\item\\a4254af0-0f67-4064-bad0-aebae594e868..jpg"
     },
     {
       "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\LaDocesLogo.png",

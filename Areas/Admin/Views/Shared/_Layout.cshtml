@@ -36,6 +36,9 @@
                             <a class="nav-link  fs-5" asp-area="Admin" asp-controller="AdminCategoria"
                                 asp-action="Index">CATEGORIA</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminPedido" asp-action="Index">Pedidos</a>
+                        </li>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-5" asp-area="Admin" asp-controller="AdminItem"
@@ -50,13 +53,14 @@
                                 asp-action="Index">Relatório vendas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminXml" asp-action="Index">Exportar xml</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminXml"
+                                asp-action="Index">Exportar xml</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+        
         <div class="container">
             <main role="main" class="py-3">
                 @RenderBody()

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using LaDoces2.Context;
 using LaDoces2.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace LaDoces2.Areas.Admin.Controllers
 {
@@ -149,10 +150,20 @@ namespace LaDoces2.Areas.Admin.Controllers
             var categoria = await _context.Categorias.FindAsync(id);
             if (categoria != null)
             {
-                _context.Categorias.Remove(categoria);
+                try{
+                    _context.Categorias.Remove(categoria);
+                      await _context.SaveChangesAsync();
+                }catch(DbUpdateException ex){
+                    if(ex.InnerException.ToString().Contains("FOREIGN KEY")){
+                        ViewData["Error"] = "Categoria não pode ser excluida, pois ja está ocupada";
+                        return View();
+
+                    }
+                }
+               
             }
             
-            await _context.SaveChangesAsync();
+          
             return RedirectToAction(nameof(Index));
         }
 
