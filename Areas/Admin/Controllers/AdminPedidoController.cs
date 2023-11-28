@@ -9,6 +9,7 @@ using LaDoces2.Context;
 using LaDoces2.Models;
 using LaDoces2.ViewModel;
 using Microsoft.AspNetCore.Authorization;
+using ReflectionIT.Mvc.Paging;
 
 namespace LaDoces2.Areas.Admin.Controllers
 {
@@ -24,9 +25,18 @@ namespace LaDoces2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminPedido
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string filtro, int pageindex = 1, string sort = "Nome")
         {
-            return View(await _context.Pedidos.ToListAsync());
+            var itenslist = _context.Pedidos.AsNoTracking().AsQueryable();
+
+            if (filtro != null)
+            {
+                itenslist = itenslist.Where(p =>p.Nome.Contains(filtro));
+            }
+            var model = await PagingList.CreateAsync(itenslist, 5,pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary{{"filtro", filtro}};
+
+            return View(model);
         }
 
         // GET: Admin/AdminPedido/Details/5
@@ -50,7 +60,7 @@ namespace LaDoces2.Areas.Admin.Controllers
         // GET: Admin/AdminPedido/Create
         public IActionResult Create(int pedidoId)
         {
-            ViewData["ItemId"] = new SelectList( _context.Itens, "ItemId", "Nome");
+            ViewData["ItemId"] = new SelectList(_context.Itens, "ItemId", "Nome");
             ViewData["PedidoId"] = pedidoId;
             return View();
         }
@@ -178,7 +188,7 @@ namespace LaDoces2.Areas.Admin.Controllers
             var pedidoVm = new PedidoItensViewModel
             {
                 Pedidos = pedido,
-                PedidoItems  = pedido.PedidoItens
+                PedidoItems = pedido.PedidoItens
             };
             return View(pedidoVm);
         }

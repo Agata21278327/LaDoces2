@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LaDoces2.Context;
 using LaDoces2.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace LaDoces2.Areas.Admin.Controllers
 {
@@ -21,12 +22,11 @@ namespace LaDoces2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminPedidoItem
-        public async Task<IActionResult> Index()
-        {
-            var appDbContext = _context.PedidoItens.Include(p => p.Item).Include(p => p.Pedido);
-            return View(await appDbContext.ToListAsync());
+        public async Task<ActionResult> Index(){
+            var AppDbContext = _context.PedidoItens.Include(p => p.Item).Include(p=> p.Pedido);
+            return View(await AppDbContext.ToListAsync());
         }
-
+        
         // GET: Admin/AdminPedidoItem/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -64,12 +64,12 @@ namespace LaDoces2.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                 double valorModel = _context.Itens.FirstOrDefault(m=>m.ItemId == pedidoItem.ItemId).Preco;
+                double valorModel = _context.Itens.FirstOrDefault(m => m.ItemId == pedidoItem.ItemId).Preco;
                 pedidoItem.Preco = Convert.ToDecimal(valorModel);
                 _context.Add(pedidoItem);
                 _context.Add(pedidoItem);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("PedidoItens", "AdminPedido", new {id = pedidoItem.PedidoId});
+                return RedirectToAction("PedidoItens", "AdminPedido", new { id = pedidoItem.PedidoId });
             }
             ViewData["ItemId"] = new SelectList(_context.Itens, "ItemId", "DescricaoCurta", pedidoItem.ItemId);
             ViewData["PedidoId"] = new SelectList(_context.Pedidos, "PedidoId", "Cep", pedidoItem.PedidoId);
@@ -110,7 +110,7 @@ namespace LaDoces2.Areas.Admin.Controllers
             {
                 try
                 {
-                     double valorModel = _context.Itens.FirstOrDefault(m=>m.ItemId == pedidoItem.ItemId).Preco;
+                    double valorModel = _context.Itens.FirstOrDefault(m => m.ItemId == pedidoItem.ItemId).Preco;
                     pedidoItem.Preco = Convert.ToDecimal(valorModel);
                     _context.Update(pedidoItem);
                     await _context.SaveChangesAsync();
@@ -166,14 +166,14 @@ namespace LaDoces2.Areas.Admin.Controllers
             {
                 _context.PedidoItens.Remove(pedidoItem);
             }
-            
+
             await _context.SaveChangesAsync();
-             return RedirectToAction("PedidoItens", "AdminPedido", new {id = pedidoItem.PedidoId});
+            return RedirectToAction("PedidoItens", "AdminPedido", new { id = pedidoItem.PedidoId });
         }
 
         private bool PedidoItemExists(int id)
         {
-          return _context.PedidoItens.Any(e => e.PedidoItemId == id);
+            return _context.PedidoItens.Any(e => e.PedidoItemId == id);
         }
     }
 }

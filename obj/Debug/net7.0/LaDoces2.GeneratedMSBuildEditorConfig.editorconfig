@@ -12,7 +12,7 @@ build_property.RootNamespace = LaDoces2
 build_property.ProjectDir = C:\dev\cs\LaDoces2\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\dev\cs\LaDoces2
 build_property._RazorSourceGeneratorDebug = 
 

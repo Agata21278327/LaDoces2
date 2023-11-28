@@ -9,6 +9,7 @@ using LaDoces2.Context;
 using LaDoces2.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
+using ReflectionIT.Mvc.Paging;
 
 namespace LaDoces2.Areas.Admin.Controllers
 {
@@ -24,9 +25,19 @@ namespace LaDoces2.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminCategoria
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string filtro, int pageindex = 1, string sort = "Nome")
         {
-              return View(await _context.Categorias.ToListAsync());
+            var itenslist = _context.Categorias.AsNoTracking().AsQueryable();
+
+            if (filtro != null)
+            {
+                itenslist = itenslist.Where(p =>p.Nome.Contains(filtro));
+
+            }
+            var model = await PagingList.CreateAsync(itenslist, 5, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary{{"filtro", filtro }};
+
+            return View(model);
         }
 
         // GET: Admin/AdminCategoria/Details/5
@@ -150,26 +161,30 @@ namespace LaDoces2.Areas.Admin.Controllers
             var categoria = await _context.Categorias.FindAsync(id);
             if (categoria != null)
             {
-                try{
+                try
+                {
                     _context.Categorias.Remove(categoria);
-                      await _context.SaveChangesAsync();
-                }catch(DbUpdateException ex){
-                    if(ex.InnerException.ToString().Contains("FOREIGN KEY")){
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException ex)
+                {
+                    if (ex.InnerException.ToString().Contains("FOREIGN KEY"))
+                    {
                         ViewData["Error"] = "Categoria não pode ser excluida, pois ja está ocupada";
                         return View();
 
                     }
                 }
-               
+
             }
-            
-          
+
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool CategoriaExists(int id)
         {
-          return _context.Categorias.Any(e => e.CategoriaId == id);
+            return _context.Categorias.Any(e => e.CategoriaId == id);
         }
     }
 }
