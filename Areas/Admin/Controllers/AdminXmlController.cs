@@ -37,8 +37,8 @@ namespace LaDoces2.Areas.Admin.Controllers
             {
                 df = DateTime.Now;
             }
-            ViewData["di"] = di.Value.ToString("yyyy-mm-dd");
-            ViewData["df"] = df.Value.ToString("yyyy-mm-dd");
+            ViewData["di"] = di.Value.ToString("yyyy-MM-dd");
+            ViewData["df"] = df.Value.ToString("yyyy-MM-dd");
             var result = await _relatorio.BuscaPorData(di, df);
             return View(result);
         }

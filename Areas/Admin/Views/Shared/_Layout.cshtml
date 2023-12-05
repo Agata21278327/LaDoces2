@@ -37,7 +37,8 @@
                                 asp-action="Index">CATEGORIA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminPedido" asp-action="Index">Pedidos</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminPedido"
+                                asp-action="Index">Pedidos</a>
                         </li>
                         </li>
                         <li class="nav-item">
@@ -60,7 +61,7 @@
                 </div>
             </div>
         </nav>
-        
+
         <div class="container">
             <main role="main" class="py-3">
                 @RenderBody()
@@ -83,6 +84,16 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 
 </html>

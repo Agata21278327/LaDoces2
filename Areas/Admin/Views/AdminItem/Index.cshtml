@@ -19,76 +19,31 @@ Total de Itens : @Model.TotalRecordCount
     <a asp-action="Create">Criar novo</a>
 </p>
 
-<table class="table" style="min-height: 35vw;">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoCurta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DescricaoDetalhada)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagemPequenaUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagemUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ativo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Destaque)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+<
+
+        <div class="list-group">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescricaoCurta)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescricaoDetalhada)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Preco)
-                </td>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.ImagemPequenaUrl)" width="100px">
-                </td>
-                <td>
-                    <img src="@Html.DisplayFor(modelItem => item.ImagemUrl)" width="100px">
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ativo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Destaque)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaId)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ItemId">Editar</a> |
+
+             <div class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <div>
+                        <h5 class="mb-1">@Html.DisplayFor(modelItem => item.Nome)</h5>
+                    </div>
+                    <div>
+                        <p class="mb-1"> @Html.DisplayFor(modelItem => item.Categoria.CategoriaId).</p>
+                    </div>
+                    <small>@Html.DisplayFor(modelItem => item.DescricaoCurta)</small>
+                    <p> <a href="@Html.DisplayFor(modelItem => item.ImagemUrl)"> <img src="@Html.DisplayFor(modelItem => item.ImagemPequenaUrl)" width="100px"></a></p>
+                </div>
+                 <div>Valor: @Html.DisplayFor(modelItem => item.Preco)<br>
+                   Ativo: @Html.DisplayFor(modelItem => item.Ativo) Destaque @Html.DisplayFor(modelItem => item.Destaque)</div>
+                    <small> @Html.DisplayFor(modelItem => item.DescricaoDetalhada) </small>    
+                <div class="mt-3"><a asp-action="Edit" asp-route-id="@item.ItemId">Editar</a> |
                     <a asp-action="Details" asp-route-id="@item.ItemId">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ItemId">Deletar</a>
-                </td>
-            </tr>
+                    <a asp-action="Delete" asp-route-id="@item.ItemId">Deletar</a></div>
+            </div>
+         
+          
         }
-    </tbody>
-</table>
+  </div>

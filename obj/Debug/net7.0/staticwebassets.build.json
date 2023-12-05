@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZguF0WW2n1wdO3+kDidP8rKJRe/eXralCK+VKfuz5eY=",
+  "Hash": "rJKcQNg+AwGWXH0vI3gca5jJBs1K4S1etAjDYXp3DFw=",
   "Source": "LaDoces2",
   "BasePath": "_content/LaDoces2",
   "Mode": "Default",
@@ -323,23 +323,6 @@
       "OriginalItemSpec": "wwwroot\\imagens\\ImagemDoce.png"
     },
     {
-      "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\28cd40ab-e72d-4736-a98d-9978993c393e..jpg",
-      "SourceId": "LaDoces2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\dev\\cs\\LaDoces2\\wwwroot\\",
-      "BasePath": "_content/LaDoces2",
-      "RelativePath": "imagens/item/28cd40ab-e72d-4736-a98d-9978993c393e..jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagens\\item\\28cd40ab-e72d-4736-a98d-9978993c393e..jpg"
-    },
-    {
       "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\5cafe245-531a-4650-8c82-658a9c8a44f9..jpg",
       "SourceId": "LaDoces2",
       "SourceType": "Discovered",
@@ -355,23 +338,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\item\\5cafe245-531a-4650-8c82-658a9c8a44f9..jpg"
-    },
-    {
-      "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\a32adce7-9e02-4b01-8f60-c0ca7b074e81..jpg",
-      "SourceId": "LaDoces2",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\dev\\cs\\LaDoces2\\wwwroot\\",
-      "BasePath": "_content/LaDoces2",
-      "RelativePath": "imagens/item/a32adce7-9e02-4b01-8f60-c0ca7b074e81..jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\imagens\\item\\a32adce7-9e02-4b01-8f60-c0ca7b074e81..jpg"
     },
     {
       "Identity": "C:\\dev\\cs\\LaDoces2\\wwwroot\\imagens\\item\\a4254af0-0f67-4064-bad0-aebae594e868..jpg",

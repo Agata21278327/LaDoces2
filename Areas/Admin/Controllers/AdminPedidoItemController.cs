@@ -69,6 +69,7 @@ namespace LaDoces2.Areas.Admin.Controllers
                 _context.Add(pedidoItem);
                 _context.Add(pedidoItem);
                 await _context.SaveChangesAsync();
+                UpdatePedido(pedidoItem.PedidoId);
                 return RedirectToAction("PedidoItens", "AdminPedido", new { id = pedidoItem.PedidoId });
             }
             ViewData["ItemId"] = new SelectList(_context.Itens, "ItemId", "DescricaoCurta", pedidoItem.ItemId);
@@ -114,6 +115,7 @@ namespace LaDoces2.Areas.Admin.Controllers
                     pedidoItem.Preco = Convert.ToDecimal(valorModel);
                     _context.Update(pedidoItem);
                     await _context.SaveChangesAsync();
+                    UpdatePedido(pedidoItem.PedidoId);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -168,12 +170,40 @@ namespace LaDoces2.Areas.Admin.Controllers
             }
 
             await _context.SaveChangesAsync();
+            UpdatePedido(pedidoItem.PedidoId);
             return RedirectToAction("PedidoItens", "AdminPedido", new { id = pedidoItem.PedidoId });
         }
 
         private bool PedidoItemExists(int id)
         {
             return _context.PedidoItens.Any(e => e.PedidoItemId == id);
+        }
+        public void UpdatePedido(int pedidoId){
+            List<PedidoItem> itens = _context.PedidoItens.Include(i=> i.Item).Where(p=> p.PedidoId == pedidoId).ToList();
+           
+            int totalItensPedido = 0;
+            decimal precoTotalPedido = 0.0m;
+
+            foreach(PedidoItem pm in itens){
+              totalItensPedido += pm.Quantidade;
+              precoTotalPedido += (Convert.ToDecimal(pm.Item.Preco) * pm.Quantidade);
+            }
+
+            Pedido p = _context.Pedidos.FirstOrDefault(p => p.PedidoId == pedidoId);
+
+            p.TotalItensPedido = totalItensPedido;
+            p.PedidoTotal = precoTotalPedido;
+           
+             try
+                {
+                    _context.Update(p);
+                     _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    throw;
+                }
+
         }
     }
 }
